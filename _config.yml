@@ -16,7 +16,7 @@
 title: IS590DV - Data Visualization
 email: achrist3@illinois.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the course website for IS590 Data Visualization in Fall 2018
+  This is the course website for IS590 Data Visualization in Spring 2019
 baseurl: "/spring2019" # the subpath of your site, e.g. /blog
 url: "https://uiuc-ischool-dataviz.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  achrist3
