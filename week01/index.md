@@ -1,11 +1,16 @@
 ---
 layout: week
-visible: false
+visible: true
 ---
 
 # Week 1 - Introduction
 
-This week, we went over the structure of the course, as well as some basics of
+For this week's code-along demo, please be sure to install [Anaconda](http://https://www.anaconda.com/download) and also download these two datasets:
+
+ * [GDP.csv](http://virdir.ncsa.illinois.edu/NCSAvis/public/is590dv/GDP.csv)
+ * [stitch.png](http://virdir.ncsa.illinois.edu/NCSAvis/public/is590dv/stitch.png)
+
+This week's lecture covers the structure of the course, as well as some basics of
 why we visualize, who we visualize for, and how to think about our relationship
 with our data.
 

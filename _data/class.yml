@@ -8,15 +8,15 @@ tas:
     name: Arjitha Balaji
     email: arjitha2@illinois.edu
     office: TBA
-    office_hours: TBA
+    office_hours: Wednesday 10AM - 12noon
   - 
     name: Krishna Shanker-Rajhan
     email: gs10@illinois.edu
     office: TBA
-    office_hours: TBA
+    office_hours: Tuesday and Thursday 4PM - 5PM
 course:
   name: Data Visualization
-  number: LIS590DV
+  number: IS590DV
   semester: Spring 2019
   location: 126 iSchool
   time: Monday, 9-11:50AM
