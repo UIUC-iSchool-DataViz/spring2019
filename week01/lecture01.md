@@ -372,6 +372,8 @@ to use any information in it in the future.
  * What types of data do we visualize?
  * How do we visualize?
 
+![](images/pie.jpg)
+
 notes:
 We're going to start out at a very high-level, discussing why we choose to
 visualize versus other types of representation, what types of data, and how we
