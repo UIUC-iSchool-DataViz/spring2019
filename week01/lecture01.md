@@ -16,7 +16,7 @@ layout: lecture
 9AM-11:50PM Mondays, 126 iSchool
 
 AJ Christensen - `achrist3@illinois.edu`</br>
-Office Hours: Thursday 10am-12noon, NCSA 2019
+Office Hours: Thursday 9am-11am, NCSA 2019
 
 TA Arjitha Balaji - `arjitha2@illinois.edu`</br>
 Office Hours: Wednesday 10am-12noon, iSchool TBA
