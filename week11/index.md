@@ -1,5 +1,6 @@
 ---
 layout: week
+visible: false
 ---
 
 # Week 11 - Case Study

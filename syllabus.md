@@ -74,17 +74,10 @@ each class.  These will be included in the course materials repository, and
 students are encouraged to fork that repository and issue pull requests to add
 suggested readings.
 
-Existing readings that may help are available in the file
-[readings.md](readings.md).
-
 # About Your Instructor
 
-Matthew Turk is an Assistant Professor at the School of Information Sciences.
-His training was in Astronomy, where he conducted simulations of the formation
-of the first stars in the Universe.  This led him to work on developing
-an analysis and visualization package for volumetric data, 
-[yt](http://yt-project.org/), which has been used for quantitative and
-qualitative visualization of data from several disciplines.
+AJ Christensen is a Visualization Researcher in the Advanced Visualization Lab at the National Center for Supercomputing Applications. His background is in computer science and filmmaking, and he has credits in many science documentary films. His visualization research tasks include reading, processing, and designing 3D numerical scientific simulations for non-expert audiences in immersive theaters.
+
 
 # Library Resources
 | http://www.library.illinois.edu/lis/
@@ -225,20 +218,20 @@ course outline below is subject to some flexibilty; students will be encouraged
 to provide feedback on the topics covered, particularly toward the end.  Topics
 that are of particular interest will be emphasized.
 
- * Week 1 (Jan 22): Introduction, syllabus, examples, and some basics
- * Week 2 (Jan 29): Operational palette, structured python, and files
- * Week 3 (Feb 5): Quantitative plots, plot components
- * Week 4 (Feb 12): Histograms and distributions
- * Week 5 (Feb 19): R and ggplot
- * Week 6 (Feb 26): Images: color, colormaps
- * Week 7 (Mar 5): Comparisons between datasets
- * Week 8 (Mar 12): Comparisons between different datasets
- * Week 9 (Mar 26): Network visualization
- * Week 10 (Apr 2): Principles of interactive visualization
- * Week 11 (Apr 9): Interactive visualization with Python
- * Week 12 (Apr 16): Scientific visualization
- * Week 13 (Apr 23): Advanced topics
- * Week 14 (Apr 30): Group presentations
+ * Week 1 (Jan 14): Introduction, syllabus, examples, and some basics
+ * Week 2 (Jan 28): Operational palette, structured python, and files
+ * Week 3 (Feb 4): Quantitative plots, plot components
+ * Week 4 (Feb 11): Histograms and distributions
+ * Week 5 (Feb 18): R and ggplot
+ * Week 6 (Feb 25): Images: color, colormaps
+ * Week 7 (Mar 4): Comparisons between datasets
+ * Week 8 (Mar 11): Comparisons between different datasets
+ * Week 9 (Mar 25): Network visualization
+ * Week 10 (Apr 1): Principles of interactive visualization
+ * Week 11 (Apr 8): Interactive visualization with Python
+ * Week 12 (Apr 15): Scientific visualization
+ * Week 13 (Apr 22): Advanced topics
+ * Week 14 (Apr 29): Group presentations
 
 ## Emergency Response: Run, Hide, Fight
 
