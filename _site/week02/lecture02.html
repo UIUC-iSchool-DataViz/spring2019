@@ -444,13 +444,28 @@ All fields for a record are presented at once.
 
  * Columnar, chunked store
  * Flexible data types in-memory and on-disk
- * Hyperslab and boolean indexing
  * Fine-grained key/val metadata
- * Groups & hierarchies
+
+<img src="images/hdf5.png" alt="hdf5" height="1000"/>
+
+notes:
+Very popular format for large computational data, particularly in astrophysics.
+Invented here at the University of Illinois.
+
+---
+
+## HDF5
+
+![](images/hdf5selections.png)
+
+ * Hyperslab and boolean indexing
  * Extensible types:
    * Numeric
    * Fixed-length strings
    * Variable strings
+
+notes:
+HDF5 has powerful tools for data selection and data slicing. Hyperslabs are chunks of array data that can be removed from one array and moved to another. Boolean masks allow you to efficiently select unordered parts of big datasets.
 
 ---
 
