@@ -5,7 +5,7 @@ visible: true
 
 # Week 1 - Introduction
 
-For this week's code-along demo, please be sure to install [Anaconda](http://https://www.anaconda.com/download) and also download these two datasets:
+For this week's code-along demo, please be sure to install [Anaconda](https://www.anaconda.com/download) and also download these two datasets:
 
  * [GDP.csv](http://virdir.ncsa.illinois.edu/NCSAvis/public/is590dv/GDP.csv)
  * [stitch.png](http://virdir.ncsa.illinois.edu/NCSAvis/public/is590dv/stitch.png)
