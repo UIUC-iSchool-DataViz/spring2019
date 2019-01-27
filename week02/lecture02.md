@@ -334,7 +334,7 @@ All fields for a record are presented at once.
  * Flexible data types in-memory and on-disk
  * Fine-grained key/val metadata
 
-<img src="images/hdf5.png" alt="hdf5" height="1000"/>
+<img src="images/hdf5.png" alt="hdf5" height="300"/>
 
 notes:
 Very popular format for large computational data, particularly in astrophysics.
