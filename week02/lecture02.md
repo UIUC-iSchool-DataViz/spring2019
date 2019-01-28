@@ -389,6 +389,11 @@ You have a palette of operations to apply.
    * Queries on other columns at fixed row location
    * External membership queries
 
+notes:
+Why filter? Why shrink dataset?
+
+Might be to reduce memory footprint. Might be to quickly investigate some values. Might be to rasterize to an image.
+
 ---
 
 ## Relationships Examples
