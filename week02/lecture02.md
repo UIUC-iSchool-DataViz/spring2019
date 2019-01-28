@@ -11,6 +11,17 @@ layout: lecture
 ## Lecture 2
 
 ---
+
+## Note Taking
+
+---
+
+## Slack
+
+[https://join.slack.com/t/is590dv-spring2019/signup](https://join.slack.com/t/is590dv-spring2019/signup)
+
+---
+
 ## Warm-Up Activity
 
 1. What is the visualization trying to show?
