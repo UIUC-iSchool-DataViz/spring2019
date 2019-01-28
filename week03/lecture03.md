@@ -494,17 +494,20 @@ This week we will discuss "mutation" of data.
  * Mathematical operations, such as injective operations.
    * Logarithmic versus linear representations
    *  Arithmetic or multiplicative relationships
-   *  Manifold remapping
- * Smoothing (reduction; not injective)
- * Histograms (reduction; not injective)
+   *  Dimensionality remapping
+ * Smoothing (reduction)
+ * Histograms (reduction)
 
 Smoothing will be an extensive topic for next week.
 
+notes:
+smoothing and histograms are only mutations if we change the number of data points (reduction). If we keep the existing points in a one-to-one (injective) way, we're not running a mutation.
+
 ---
 
 ## Binning and Histograms
 
-<!-- .slide: data-background-image="images/circles.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/circles.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
 
 <div style="width: 50%">
 We can aggregate data points according to their position along defined
@@ -515,7 +518,7 @@ dimensions.
 
 ## Binning and Histograms
 
-<!-- .slide: data-background-image="images/circles_grid.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/circles_grid.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
 
 <div style="width: 50%">
 We can aggregate data points according to their position along defined
@@ -527,7 +530,7 @@ dimensions.
 
 ## Binning and Histograms
 
-<!-- .slide: data-background-image="images/circles_grid_filled.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/circles_grid_filled.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
 
 * $\Sigma 1$ (count)
 * $\Sigma v_i$ (sum)
@@ -539,16 +542,14 @@ dimensions.
 ## Splitting Operations
 
 We can split or group collections of data based on some characteristic.
-
-<!-- .slide: data-background-image="images/split.svg" data-background-size="65% auto" data-background-position="top 5.0em center"-->
+<!-- .slide: data-background-image="images/split.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
 
 ---
 
 ## Splitting Operations
 
 We can split or group collections of data based on some characteristic.
-
-<!-- .slide: data-background-image="images/split_finished.svg" data-background-size="65% auto" data-background-position="top 5.0em center"-->
+<!-- .slide: data-background-image="images/split_finished.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
 
 
 ---
