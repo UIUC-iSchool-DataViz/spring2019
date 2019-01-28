@@ -6,8 +6,8 @@ layout: lecture
 
 # Data Visualization
 <div style="height: 6.0em;"></div>
-## Matthew Turk
-## Fall 2018
+## Andrew Christensen
+## Spring 2019
 ## Lecture 3
 
 ---
@@ -38,21 +38,35 @@ How do we draw an image?
 
 ---
 
+## Displays
+
+![](images/screens.png)
+
+notes:
+all modern displays are grids of pixels - pixel literally means "picture element". We divide the whole image into discrete pieces. 
+
+---
+
 <iframe width="1024" height="576"
 src="https://www.youtube.com/embed/qfDxiVpgjiM" frameborder="0"
 allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+notes:
+There was an age of vector displays, but it seemed limited in utility.
+Atari 1983 Star Wars video game
+Vector monitor similar to oscilloscope - CRT electron beam follows mathematically defined path.
+
 ---
 
 ## Let's draw a line.
 
-<!-- .slide: data-background-image="images/line.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw a line.
 
-<!-- .slide: data-background-image="images/line.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ```
 start = (x0, y0)
@@ -61,13 +75,8 @@ width = 1.0
 ```
 <!-- .element: class="left_abs" style="width: 50%"-->
 
----
-
-## Let's draw a line.
-
-Convert to an 8x8 image.
-
-<!-- .slide: data-background-image="images/line_grid.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+notes:
+you can see a line is basically 5 bytes in memory - one byte for each integer end point coordinate, and one byte for the width.
 
 ---
 
@@ -75,7 +84,15 @@ Convert to an 8x8 image.
 
 Convert to an 8x8 image.
 
-<!-- .slide: data-background-image="images/line_grid_fill.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line_grid.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
+
+---
+
+## Let's draw a line.
+
+Convert to an 8x8 image.
+
+<!-- .slide: data-background-image="images/line_grid_fill.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
@@ -83,7 +100,7 @@ Convert to an 8x8 image.
 
 Convert to an 16x16 image.
 
-<!-- .slide: data-background-image="images/line_grid_fine2.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line_grid_fine2.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
@@ -91,7 +108,7 @@ Convert to an 16x16 image.
 
 Convert to an 16x16 image.
 
-<!-- .slide: data-background-image="images/line_grid_fine2_fill.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line_grid_fine2_fill.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
@@ -99,7 +116,7 @@ Convert to an 16x16 image.
 
 Convert to an 32x32 image.
 
-<!-- .slide: data-background-image="images/line_grid_fine4.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line_grid_fine4.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
@@ -107,7 +124,15 @@ Convert to an 32x32 image.
 
 Convert to an 32x32 image.
 
-<!-- .slide: data-background-image="images/line_grid_fine4_fill.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/line_grid_fine4_fill.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
+
+---
+
+## Representations
+
+ 1. Numerical Data
+ 2. ???
+ 3. Pixels On Screen
 
 ---
 
@@ -123,6 +148,7 @@ the **raster** representation and the **vector** representation.
  * Each pixel is represented as a color
  * Common file formats such as GIF, JPG, PNG
  * Compression can be lossy (JPG) or lossless (PNG)
+ * Common Editors: Paint, Photoshop
 
 In a raster image, you describe precisely what to display.
 
@@ -137,6 +163,57 @@ In a raster image, you describe precisely what to display.
  * The display does not exist until it is "rendered."
  * Options for compression include (lossless) text compression, although
    the rendering engine can simplify display
+ * Common Editors: Illustrator, Inkscape
+
+---
+
+## Representations
+
+1 line (uncompressed, single precision)</br> 
+ * x0, y0, x1, y1, width </br>
+ * 5 bytes </br>
+ * 40 bits </br>
+
+1 pixel (uncompressed, singe bit-depth)</br>
+ * 1 bit
+
+If a line covers fewer than 40 pixels, raster is less memory than vector
+
+notes:
+keep in mind, compression algorithms can make these comparisons a little fuzzier
+
+---
+
+## Representations
+
+![](images/bigPixels.jpg)
+
+notes:
+in this image, all the lines ARE less than 40 pixels
+
+---
+
+## Representations
+
+![](images/smallPixels.jpg)
+
+notes:
+but in this image, the lines aren't. What's the difference? 
+
+The difference is the ratio of the size of the lines to the raster resolution.
+
+---
+
+## Representations
+
+![](images/zoomedPixels.jpg)
+
+notes:
+and now we're back to less than 40 pixels per line. But what changed? Not the resolution.
+
+Now most of the line goes off the screen. We haven't changed the coordinates, we've just zoomed in.
+
+Raster data discards any information outside of the domain. Vector data preserves all information, regardless of boundaries.
 
 ---
 
@@ -144,12 +221,17 @@ In a raster image, you describe precisely what to display.
 
 | | | | | |
 |-:|-|-|-|-|
-| | 1 Line | 2 Lines | 30 Lines | 1000 Lines |
+| | 1 Line | 10 Lines | 1000 Lines | 1e6 Lines |
 |`600x600` | 45kb | 45kb | 45kb | 45kb |
 |`1200x1200` | 180kb | 180kb | 180kb | 180kb |
 |`2400x2400` | 720kb | 720kb | 720kb | 720kb |
 
 (uncompressed, 1-bit images)
+
+600 x 600 = 360,000 bits / 8 = 45,000 bytes = 45 kilobytes
+
+notes:
+You can see that regardless of the number of shapes, the image size stays the same
 
 ---
 
@@ -157,18 +239,21 @@ In a raster image, you describe precisely what to display.
 
 | | | | | |
 |-:|-|-|-|-|
-| | 1 Line | 2 Lines | 30 Lines | 1000 Lines |
-|`600x600` | 5 bytes | 10 bytes | 150 bytes | 5000 bytes |
-|`1200x1200` | 5 bytes | 10 bytes | 150 bytes | 5000 bytes |
-|`2400x2400` | 5 bytes | 10 bytes | 150 bytes | 5000 bytes |
+| | 1 Line | 10 Lines | 1000 Lines | 1e6 Lines |
+|`600x600` | 5 bytes | 50 bytes | 5kb | 5mb |
+|`1200x1200` | 5 bytes | 50 bytes | 5kb | 5mb |
+|`2400x2400` | 5 bytes | 50 bytes | 5kb | 5mb |
 
 (uncompressed, single precision)
+
+notes:
+Now no matter the image size, the shape data stays the same size. You can see that with a large number of shapes, the raster representation becomes smaller.
 
 ---
 
 ## Let's draw a circle.
 
-<!-- .slide: data-background-image="images/single_circle.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/single_circle.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ```
 center = (x0, y0)
@@ -180,43 +265,43 @@ radius = 1.0
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots_grid.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots_grid.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots_grid_fill.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots_grid_fill.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots_grid_fine2.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots_grid_fine2.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots_grid_fine2_fill.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots_grid_fine2_fill.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots_grid_fine4.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots_grid_fine4.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
 ## Let's draw many circles.
 
-<!-- .slide: data-background-image="images/dots_grid_fine4_fill.svg" data-background-size="auto 75%" data-background-position="right 10% bottom 50%"-->
+<!-- .slide: data-background-image="images/dots_grid_fine4_fill.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 50%"-->
 
 ---
 
@@ -246,6 +331,107 @@ radius = 1.0
 
 ---
 
+## Raster or Vector?
+
+![](images/menger1.png)
+
+8 points
+2.96 kb
+
+notes:
+Would it be easier to store this cube as a vector or as raster?
+This is larger than a few bytes because it's storing other useful values in CG software.
+
+---
+
+## Raster or Vector?
+
+![](images/menger2.png)
+
+160 points
+12.28 kb
+
+notes:
+Does this change it?
+This is a recursive shape known as a Menger Sponge. Each cube keeps getting replaced with the whole previous shape.
+
+---
+
+## Raster or Vector?
+
+![](images/menger3.png)
+
+3200 points
+445.05 kb
+
+notes:
+
+
+---
+
+## Raster or Vector?
+
+![](images/menger4.png)
+
+64000 points
+9.59 mb
+
+notes:
+Does it make a difference yet?
+
+---
+
+## Raster or Vector?
+
+![](images/menger5.png)
+
+1.28M points
+190.93 mb
+
+notes:
+
+
+---
+
+## Raster or Vector?
+
+![](images/menger6.png)
+
+25.6M points
+3.73 gb
+
+notes:
+
+
+---
+
+## Raster or Vector?
+
+![](images/menger6.png)
+
+25.6M points
+3.73 gb
+
+1280 x 720 = 921600
+
+notes:
+There are 25 times more points than pixels, and most of the pixels don't include the shape.
+
+
+---
+
+## Infinite resolution
+
+![](images/nature.jpg)
+
+notes:
+nature has effectively infinite resolution, down to the atom.
+It's much easier to discretize this scene to the level of pixels than to try to use vector shapes to describe everything happening in the photo.
+
+photo by  Ekaterina Vasyagina
+
+---
+
 ## Text
 
 Modern fonts are composed of glyphs defined by functional forms of their shape.
@@ -267,6 +453,19 @@ fallback fonts available to the rendering engine can be used.
 <img src="images/font_T.png">
 
 <img src="images/font_X.png">
+
+---
+
+## Geographical Data
+
+Which of these are better represented as raster or vector?
+ 1. State Boundaries
+ 2. Relief (height) Map
+ 3. Population Density
+ 4. Capitol Cities
+
+notes:
+a simple cheat is anytime you see the word "density", it's easier to represent with raster.
 
 ---
 
