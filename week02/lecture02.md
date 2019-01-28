@@ -411,6 +411,13 @@ Might be to reduce memory footprint. Might be to quickly investigate some values
    * "Shares members"
    * "Shares no members"
 
+notes:
+set based for example: languages of Canada
+
+English is a member, Czech is not a member
+
+shares members with Madagascar (French), shares no members with Italy
+
 ---
 
 ## Examples
