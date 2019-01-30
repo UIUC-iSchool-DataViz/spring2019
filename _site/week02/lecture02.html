@@ -102,6 +102,11 @@
   background: #aaa;
 }
 
+.reveal .slide-number {
+  font-size: 36pt;
+  right:7%;
+}
+
 </style>
   </head>
 
@@ -123,6 +128,17 @@
 ## Lecture 2
 
 ---
+
+## Note Taking
+
+---
+
+## Slack
+
+[https://join.slack.com/t/is590dv-spring2019/signup](https://join.slack.com/t/is590dv-spring2019/signup)
+
+---
+
 ## Warm-Up Activity
 
 1. What is the visualization trying to show?
@@ -501,6 +517,11 @@ You have a palette of operations to apply.
    * Queries on other columns at fixed row location
    * External membership queries
 
+notes:
+Why filter? Why shrink dataset?
+
+Might be to reduce memory footprint. Might be to quickly investigate some values. Might be to rasterize to an image.
+
 ---
 
 ## Relationships Examples
@@ -517,6 +538,13 @@ You have a palette of operations to apply.
    * "Is not a member"
    * "Shares members"
    * "Shares no members"
+
+notes:
+set based for example: languages of Canada
+
+English is a member, Czech is not a member
+
+shares members with Madagascar (French), shares no members with Italy
 
 ---
 
@@ -633,6 +661,7 @@ visualization.
         backgroundTransition: 'none',
         showNotes: true,
         progress: false,
+	slideNumber: true,
     });
 </script>
   </body>

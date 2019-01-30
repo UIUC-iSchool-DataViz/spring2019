@@ -498,10 +498,30 @@ This week we will discuss "mutation" of data.
  * Smoothing (reduction)
  * Histograms (reduction)
 
-Smoothing will be an extensive topic for next week.
+Smoothing will be a topic for next week.
 
 notes:
+remap dimensions like inches to centimeters. Or height to body mass index. Not always a direct relationship.
+
 smoothing and histograms are only mutations if we change the number of data points (reduction). If we keep the existing points in a one-to-one (injective) way, we're not running a mutation.
+
+---
+
+## Histograms
+
+![](images/skylines.png)
+
+notes:
+What can we understand from this visualization?
+
+---
+
+## Histograms
+
+![](images/christmas.png)
+
+notes:
+What can we get from this one?
 
 ---
 
@@ -530,19 +550,68 @@ dimensions.
 
 ## Binning and Histograms
 
-<!-- .slide: data-background-image="images/circles_grid_filled.svg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
+<!-- .slide: data-background-image="images/circles_grid_filled.jpg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
 
 * $\Sigma 1$ (count)
 * $\Sigma v_i$ (sum)
 * $\frac{\Sigma v_i }{ \Sigma 1}$ (average)
 * $\frac{\Sigma v_i w_i}{\Sigma w_i}$ (weighted average)
 
+notes:
+these dimensions come from the data, I'm not talking about their position in the plot
+
+You can imagine these as height and weight of people
+
 ---
 
+## Binning and Histograms
+
+<!-- .slide: data-background-image="images/circles_grid_histogram_count.jpg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
+
+* $\Sigma 1$ (count)
+
+notes:
+Counting number of samples in a plot is a way to analyze one dimension, like people of various heights.
+
+---
+
+
+## Binning and Histograms
+
+<!-- .slide: data-background-image="images/circles_grid_histogram_sum.jpg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
+
+* $\Sigma v_i$ (sum)
+
+notes:
+We can also sum by bins of the perpendicular axis. This can reduce redundant data.
+
+This histogram shows how many different weight classes are represented by people of various heights.
+
+---
+
+
+## Binning and Histograms
+
+<!-- .slide: data-background-image="images/circles_grid_histogram_avg.jpg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
+
+* $\frac{\Sigma v_i }{ \Sigma 1}$ (average)
+* $\frac{\Sigma v_i w_i}{\Sigma w_i}$ (weighted average)
+
+notes:
+And we can average the frequency in these 2-dimension cells.
+
+This tells us the average number of people per weight class for each height class. This is similar to the count of each height class, but gives us additional information about the density of our weight classes.
+
+We can also take a weighted average - perhaps favoring the heavier weight classes - which could illustrate a trend between height and chances of being a heavier weight.
+
+---
 ## Splitting Operations
 
 We can split or group collections of data based on some characteristic.
 <!-- .slide: data-background-image="images/split.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
+
+notes:
+What if this data were automobile accidents? What is a characteristic we could use to split the data?
 
 ---
 
@@ -551,6 +620,10 @@ We can split or group collections of data based on some characteristic.
 We can split or group collections of data based on some characteristic.
 <!-- .slide: data-background-image="images/split_finished.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
 
+notes:
+perhaps the type of vehicle, or whether the accident resulted in an injury, or by the number of vehicles involved
+
+Each of these subsets might create their own questions worth investigating.
 
 ---
 
@@ -586,6 +659,9 @@ n_students += 1
 n_students_orig = n_students
 n_students += 3
 ```
+
+notes:
+what are the results of each line of code?
 
 ---
 
