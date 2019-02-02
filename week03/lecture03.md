@@ -51,10 +51,21 @@ all modern displays are grids of pixels - pixel literally means "picture element
 src="https://www.youtube.com/embed/qfDxiVpgjiM" frameborder="0"
 allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+Link: https://www.youtube.com/watch?v=qfDxiVpgjiM
+
 notes:
 There was an age of vector displays, but it seemed limited in utility.
 Atari 1983 Star Wars video game
 Vector monitor similar to oscilloscope - CRT electron beam follows mathematically defined path.
+
+---
+
+<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/crBo7voJTgY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Link: https://www.youtube.com/watch?v=crBo7voJTgY
+
+notes:
+This does have the fun effect that you can actually run some of these on oscilloscopes!
 
 ---
 
@@ -333,7 +344,7 @@ radius = 1.0
 
 ## Raster or Vector?
 
-![](images/menger1.png)
+<img src="images/menger1.png" height="450">
 
 8 points
 2.96 kb
@@ -346,7 +357,7 @@ This is larger than a few bytes because it's storing other useful values in CG s
 
 ## Raster or Vector?
 
-![](images/menger2.png)
+<img src="images/menger2.png" height="450">
 
 160 points
 12.28 kb
@@ -359,7 +370,7 @@ This is a recursive shape known as a Menger Sponge. Each cube keeps getting repl
 
 ## Raster or Vector?
 
-![](images/menger3.png)
+<img src="images/menger3.png" height="450">
 
 3200 points
 445.05 kb
@@ -371,7 +382,7 @@ notes:
 
 ## Raster or Vector?
 
-![](images/menger4.png)
+<img src="images/menger4.png" height="450">
 
 64000 points
 9.59 mb
@@ -383,7 +394,7 @@ Does it make a difference yet?
 
 ## Raster or Vector?
 
-![](images/menger5.png)
+<img src="images/menger5.png" height="450">
 
 1.28M points
 190.93 mb
@@ -395,7 +406,7 @@ notes:
 
 ## Raster or Vector?
 
-![](images/menger6.png)
+<img src="images/menger6.png" height="450">
 
 25.6M points
 3.73 gb
@@ -407,7 +418,7 @@ notes:
 
 ## Raster or Vector?
 
-![](images/menger6.png)
+<img src="images/menger6.png" height="450">
 
 25.6M points
 3.73 gb
@@ -429,6 +440,25 @@ nature has effectively infinite resolution, down to the atom.
 It's much easier to discretize this scene to the level of pixels than to try to use vector shapes to describe everything happening in the photo.
 
 photo by  Ekaterina Vasyagina
+
+---
+
+## Text
+
+Modern fonts are composed of glyphs defined by functional forms of their shape.
+Font rendering engines such as freetype2 can generate bitmaps for fonts
+rendered at specific resolutions.
+
+---
+
+## Text
+
+Modern fonts are composed of glyphs defined by functional forms of their shape.
+Font rendering engines such as freetype2 can generate bitmaps for fonts
+rendered at specific resolutions.
+
+In raster image file formats, fonts do not need to be embedded: the rasterized,
+rendered version is the one that is transmitted to the viewer.
 
 ---
 
@@ -558,9 +588,9 @@ dimensions.
 * $\frac{\Sigma v_i w_i}{\Sigma w_i}$ (weighted average)
 
 notes:
-these dimensions come from the data, I'm not talking about their position in the plot
+vi means the value of something, wi is the weight of "importance" of the thing. So a bin can have a larger value by having a higher vi or wi.
 
-You can imagine these as height and weight of people
+let's imagine each data point here is a building owned by the state of Illinois
 
 ---
 
@@ -571,38 +601,33 @@ You can imagine these as height and weight of people
 * $\Sigma 1$ (count)
 
 notes:
-Counting number of samples in a plot is a way to analyze one dimension, like people of various heights.
+Here we are asking, how many data points are there in each bin. Perhaps the bins are square footage of the building - 1000-2000 sq ft, 2000-3000 sq ft, and 3000-4000 sq ft, etc. So we see how many buildings fit into each size class.
 
 ---
 
-
 ## Binning and Histograms
 
-<!-- .slide: data-background-image="images/circles_grid_histogram_sum.jpg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
+<!-- .slide: data-background-image="images/circles_values.png" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
 
 * $\Sigma v_i$ (sum)
 
 notes:
-We can also sum by bins of the perpendicular axis. This can reduce redundant data.
-
-This histogram shows how many different weight classes are represented by people of various heights.
+We can also sum by VALUE. We can add the actual square footage per building in its size class. So we might find that from the 8 buildings in the smallest size group, there's a total of 7500 square feet of building space.
 
 ---
 
 
 ## Binning and Histograms
 
-<!-- .slide: data-background-image="images/circles_grid_histogram_avg.jpg" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
+<!-- .slide: data-background-image="images/circles_values_weights2.png" data-background-size="auto 65%" data-background-position="right 10% bottom 40%"-->
 
 * $\frac{\Sigma v_i }{ \Sigma 1}$ (average)
 * $\frac{\Sigma v_i w_i}{\Sigma w_i}$ (weighted average)
 
 notes:
-And we can average the frequency in these 2-dimension cells.
+We can also find the AVERAGE value per bin - so what's the average square footage in each size class.
 
-This tells us the average number of people per weight class for each height class. This is similar to the count of each height class, but gives us additional information about the density of our weight classes.
-
-We can also take a weighted average - perhaps favoring the heavier weight classes - which could illustrate a trend between height and chances of being a heavier weight.
+And we can do a WEIGHTED average as well. Perhaps we're most interested in buildings that are newer, so we can weight the square footage values by the building's age. Old buildings will contribute less to the average than new buildings.
 
 ---
 ## Splitting Operations
@@ -611,6 +636,8 @@ We can split or group collections of data based on some characteristic.
 <!-- .slide: data-background-image="images/split.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
 
 notes:
+Splitting is meant for categorical "descriptive" data
+
 What if this data were automobile accidents? What is a characteristic we could use to split the data?
 
 ---
@@ -692,3 +719,14 @@ while len(a) < 5:
 
 ---
 
+## Functions
+
+```python
+def func(arg1):
+    print(arg)
+
+func("Hello!")
+func("AEIOU")
+```
+
+---
