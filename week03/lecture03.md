@@ -320,7 +320,7 @@ radius = 1.0
 
 | | | | | |
 |-:|-|-|-|-|
-| | 1 Circle | 2 Circles | 30 Circles | 1000 Circles |
+| | 1 Circle | 2 Circles | 1000 Circles | 1e6 Circles |
 |`600x600` | 45kb | 45kb | 45kb | 45kb |
 |`1200x1200` | 180kb | 180kb | 180kb | 180kb |
 |`2400x2400` | 720kb | 720kb | 720kb | 720kb |
@@ -334,9 +334,9 @@ radius = 1.0
 | | | | | |
 |-:|-|-|-|-|
 | | 1 Circle | 2 Circles | 1000 Circles | 1e6 Circles |
-|`600x600` | 3 bytes | 6 bytes | 3000 bytes | 3 Mb |
-|`1200x1200` | 3 bytes | 6 bytes | 3000 bytes | 3 Mb |
-|`2400x2400` | 3 bytes | 6 bytes | 3000 bytes | 3 Mb |
+|`600x600` | 3 bytes | 6 bytes | 3kb | 3Mb |
+|`1200x1200` | 3 bytes | 6 bytes | 3kb | 3Mb |
+|`2400x2400` | 3 bytes | 6 bytes | 3kb | 3Mb |
 
 (uncompressed, single precision)
 
@@ -532,12 +532,10 @@ This week we will discuss "mutation" of data.
 
  * Mathematical operations, such as injective operations.
    * Logarithmic versus linear representations
-   *  Arithmetic or multiplicative relationships
-   *  Dimensionality remapping
+   * Arithmetic or multiplicative relationships
+   * Dimensionality remapping
  * Smoothing (reduction)
  * Histograms (reduction)
-
-Smoothing will be a topic for next week.
 
 notes:
 remap dimensions like inches to centimeters. Or height to body mass index. Not always a direct relationship.
@@ -548,6 +546,8 @@ smoothing and histograms are only mutations if we change the number of data poin
 
 ## Histograms
 
+What can we understand from these plots?
+
 ![](images/skylines.png)
 
 notes:
@@ -556,6 +556,8 @@ What can we understand from this visualization?
 ---
 
 ## Histograms
+
+What can we understand from this plot?
 
 ![](images/christmas.png)
 
