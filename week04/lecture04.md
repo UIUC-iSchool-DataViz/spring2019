@@ -7,7 +7,7 @@ visible: true
 
 # Data Visualization
 <div style="height: 6.0em;"></div>
-## Andrew Christensen
+## AJ Christensen
 ## Spring 2019
 ## Lecture 4
 
