@@ -232,6 +232,36 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 
 ---
 
+## Scales and Scaling
+
+Displaying a quantity requires assigning to it a given representation.
+A common mechanism for doing this is to vary the color of a particular region
+or set of display units with respect to the quantity expressed in those units.
+
+In mathematical notation, we first "normalize" our data value by assigning to a
+range:
+
+$g(v) \rightarrow v' \in [0, 1]$
+
+and then, given a color mapping function, assign to this a given color:
+
+$f(v') \rightarrow (R, G, B)$
+
+---
+
+## Scales and Scaling
+
+Displaying a quantity requires assigning to it a given representation.
+A common mechanism for doing this is to vary the color of a particular region
+or set of display units with respect to the quantity expressed in those units.
+
+<img src="images/paintBynumbers.png" height="300">
+
+notes: if people are familiar with the "paint by numbers" idea, this is much like
+that one
+
+---
+
 <!-- .slide: data-background-image="images/gist_stern_colors.png" data-background-size="auto 75%" -->
 
 ---
