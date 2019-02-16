@@ -211,6 +211,30 @@ We can use these to accomplish:
 
 ---
 
+## Transformations
+
+<img src="images/teapot1.png" width="500"/>
+
+---
+
+## Transformations
+
+<img src="images/teapot2.png" width="500"/>
+
+---
+
+## Transformations
+
+<img src="images/teapot3.png" width="500"/>
+
+---
+
+## Transformations
+
+<img src="images/teapot4.png" width="500"/>
+
+---
+
 ## Choosing a Visualization
 
 When we are examining data, what can we look for?
@@ -244,12 +268,6 @@ Rods (low-light) and cones (color) mediate vision. Humans have about 20 times
 as many rods (120 million) as cones (6 million).
 
 <img src="images/rodsAndConesPhoto.png" height="400"/> 
-
----
-
-## Let's Try It
-
-http://enchroma.com/test/instructions/
 
 ---
 
@@ -350,6 +368,9 @@ coding environments will often provide "named" colors if you're more interested 
 <td><img src="images/matplotlibColors.png" width="350"/></br>matplotlib</td>
 </tr></table>
 
+notes:
+It's worth noting that "color words" are not consistent across languages or cultures. Color is a product of culture.
+
 ---
 
 ## Color Palettes
@@ -397,6 +418,30 @@ The outsides of this color map get darker while the center is brighter.
 
 notes:
 The blended areas of the continuous map here are kind of gross looking. This kind of random color map is best for categorical data that is NOT continuous.
+
+---
+
+## Color Meaning
+
+<img src="images/blackBodyColor.png" width="600"/>
+
+notes:
+Which end of this is hot and which end is cold? What do red and blue mean?
+
+red in the USA is bravery, but red in China is revolution
+
+green in the western world is Christmas, but green in the eastern world is Islam
+
+You're not always picking colors relative to each other, but relative to culture as well.
+
+---
+
+## Color Meaning
+
+<img src="images/skintones.png" width="600"/>
+
+notes:
+Human skin color is a particularly SENSITIVE area of color psychology. Western culture often treats dark colors as "mysterious" or "evil" and this is largely rooted in a history of racial bias.
 
 ---
 
@@ -463,6 +508,11 @@ $v' = f(v)$
 
 For instance, with logs or squares.
 
+notes:
+We can fit our continuous distribution linearly to a color map - so a low data value is at the beginning of the color map, a high value is at the top, and a middle value is halfway up the map.
+
+Or we can remap it with exponents, or other mathematical operations.
+
 ---
 
 ## Color Mapping: Linear Mapping
@@ -470,6 +520,9 @@ For instance, with logs or squares.
 We map from a range of values to (0, 1):
 
 $ v' = (v - v_0)/(v_1 - v_0) $
+
+notes:
+in order to get the data values to line up with the color bar - which goes from 0 to 1 - we have to transform our data into a range of 0 to 1. This can be as easy as dividing all value by the largest value, or we can do fancier things.
 
 ---
 
@@ -494,6 +547,23 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 ## RGB Components
 
 <!-- .slide: data-background-image="images/magma_colors.png" data-background-size="auto 75%" -->
+
+---
+
+## Color Blindness
+
+<img src="images/colorBlind.png" width="800"/>
+
+notes:
+these are not the only types of color blindness, just the types where one of the three types of cone are missing. Sometimes that third cone is just "anomalous", and sometimes more than one cone is missing, but it's much rarer.
+
+You can see that designing for a color blind person can be difficult if you put all the information into one cone. You catch a wider audience by using the colors between the cones, like yellow, cyan, and magenta.
+
+---
+
+## Color Blindness
+
+http://enchroma.com/test/instructions/
 
 ---
 
