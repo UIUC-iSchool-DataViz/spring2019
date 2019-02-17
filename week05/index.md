@@ -9,6 +9,7 @@ Please download these datasets for the coding demo:
 
  * [Lake Michigan Bathymetry](data/michigan_lld.flt)
  * [Brain Scan Data](data/single_dicom.h5)
+ * [Image](data/littleCorgiInHat.png)
 
  * [Python: Affine Transformations](affine_transformation.py)
  * [Python: Palette Colors](palette_colors.py)
