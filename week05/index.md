@@ -10,6 +10,9 @@ Please download these datasets for the coding demo:
  * [Lake Michigan Bathymetry](data/michigan_lld.flt)
  * [Brain Scan Data](data/single_dicom.h5)
 
+ * [Python: Affine Transformations](affine_transformation.py)
+ * [Python: Palette Colors](palette_colors.py)
+
 This week, we covered how colors work, how transformations work, and how we can
 choose colors and transforms to better suit our data.
 
