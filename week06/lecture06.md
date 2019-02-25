@@ -23,6 +23,13 @@ layout: lecture
 
 ---
 
+## Assignments Clarification
+
+1. Leave notes in comments! Future homework will remove more points if this is missing.
+1. Written paragraphs should describe WHY you did something, not HOW you did something. 
+
+---
+
 ## Last Week
 
  * Transformations
@@ -463,29 +470,11 @@ https://vega.github.io/editor/
 
 ---
 
-## Assignment 3
-
- * Using traitlets, widgets and bqplot, build a notebook that:
-   1. Uses the UFO datasets
-   2. Allows changing the x and y fields on a scatter plot from the UFO dataset
-   3. Displays tooltips when hovering over individual items
- * Build a second widget that displays binned, aggregate values where you can change:
-   1. The field to "bin"
-   2. The method of aggregation (sum, mean, min, max, count)
-   3. The number of bins
- * This will be collected via nbgrader, and we will work in-class next week on
-   expanding it.
-
----
-
-## Today: Let's Try Things
-
-Today we are going to build comparisons with our (virtual) hands.
-
- * A Bit More Matplotlib
-   * Patches and elements
-   * "Projections"
-   * Polar projections
- * Traitlets
-
-## Next Week: Lab all day
+## Assignment 5
+ * Viz #1: Using traitlets, widgets and bqplot, build a notebook that:
+   1. Uses the UFO dataset (see week 4) or the buildings dataset
+   1. Creates a scatter plot that you can interact with (pan & zoom, or other)
+   1. Explain why you implemented the interactivity you did - how does it help visualize what you want it to visualize?
+ * Viz #2: Work through the Wealth of Nations plot we demonstrated in class
+   1. Change at least 3 aspects of this visualization
+   1. Explain why you made the choices you did - how does this help visualize some aspect of this dataset that the original visualization does not?
