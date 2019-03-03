@@ -8,8 +8,8 @@ include_vega: true
 
 # Data Visualization
 <div style="height: 6.0em;"></div>
-## Matthew Turk
-## Fall 2018
+## AJ Christensen
+## Spring 2019
 ## Lecture 8
 
 ---
@@ -145,27 +145,6 @@ interpreted:
 
 ---
 
-## Assignment 5
-
-Your assignment is to pick three of the following possibilities and write up a
-set of comparisons for constructing the *same* visualization.
-
- * Matplotlib
- * Bokeh
- * Plotly
- * D3 / Vega / Vega-lite / Altair
- * bqplot
- * R / RStudio
-
-These comparisons should be:
-
- * What is the license for the software?
- * What is the focus of the software?
- * Does it have interactivity, and how easy is it?
- * What are the pros and cons of using it?
-
----
-
 ## Markdown
 
 We'll be using markdown a bit in this course, and even more so as we move
@@ -195,6 +174,22 @@ To map from one system to another, we must "project" from the original sphere
 to the flat object we are observing.
 
 What are some things we could preserve during such a projection?
+
+<img src="images/mapwrap.gif" height="350"/>
+
+notes:
+One common conversion from sphere to plane is the squashed cylinder approach
+
+
+---
+
+## Projections
+
+<img src="images/mapsplode.gif" height="350"/>
+
+notes:
+There's always a weird way to do it too. Here we're exploding the sphere into lots of 
+mostly planar pieces that we can just lie out side-by-side.
 
 ---
 
@@ -282,6 +277,21 @@ What do you notice?
 
 What happens when we make a map that minimizes one region and maximizes
 another?
+
+---
+
+## Discussion
+
+<iframe width="1024" height="576" src="https://www.youtube.com/embed/vVX-PrBRtTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Discussion
+
+[The True Size Of...](https://thetruesize.com)
+
+notes:
+Let's go see what Greenland actually looks like
 
 ---
 
@@ -380,6 +390,23 @@ ax.plot([c_lon, a_lon], [c_lat, a_lat], transform = cartopy.crs.Geodetic())
 
 ---
 
-## Lab
+## Assignment 7: Evaluating Visualization Engines
 
-Let's start by looking at the "transportable array" dataset.
+Your assignment is to pick three of the following possibilities and write up a
+set of comparisons for constructing the *same* visualization.
+
+ * Matplotlib
+ * Bokeh
+ * Plotly
+ * D3 / Vega / Vega-lite / Altair
+ * bqplot
+ * R / RStudio
+
+These comparisons should be:
+
+ * What is the license for the software?
+ * What is the focus of the software?
+ * Does it have interactivity, and how easy is it?
+ * What are the pros and cons of using it?
+
+
