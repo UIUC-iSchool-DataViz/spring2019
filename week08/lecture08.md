@@ -213,6 +213,9 @@ Mercator is a "conformal" projection.  What is wrong with this?
 
 <!-- .slide: data-background-image="images/mercator.png" data-background-size="auto 80%" -->
 
+notes:
+conformal = shape preserving (at the expense of accurate size)
+
 ---
 
 ## Projections: Distortions
@@ -230,6 +233,9 @@ What do you notice?
 ---
 
 <!-- .slide: data-background-image="images/mercator_tissot.png" data-background-size="auto 80%" -->
+
+notes:
+Greenland and Antarctica are HUGE
 
 ---
 
@@ -284,6 +290,9 @@ another?
 
 <iframe width="1024" height="576" src="https://www.youtube.com/embed/vVX-PrBRtTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+notes:
+after watching this, it's useful to know that the Peters projection is actually flawed as a teaching tool because of how much it distorts the shapes of countries near the poles.
+
 ---
 
 ## Discussion
@@ -292,6 +301,35 @@ another?
 
 notes:
 Let's go see what Greenland actually looks like
+
+---
+
+## Discussion
+
+Why is Europe at the center of all the maps we've looked at?
+
+---
+
+## Discussion
+
+<img src="Azimuthal_equidistant_projection.jpg" width="1024"/>
+
+---
+
+## Discussion
+
+<img src="Azimuthal_equidistant_tissot.png" width="1024"/>
+
+---
+## Discussion
+
+<img src="Waterman_projection.png" width="1024"/>
+
+---
+
+## Discussion
+
+<img src="Waterman_tissot.png" width="1024"/>
 
 ---
 
@@ -374,9 +412,17 @@ ax.plot([c_lon, a_lon], [c_lat, a_lat], transform = cartopy.crs.Geodetic())
 
 <!-- .slide: data-background-image="images/map_plot1.png" data-background-size="auto 95%" -->
 
+notes:
+the blue line is Plate Carree, which maintains a straight line on the lat-lon grid
+
+the orange line is Geodetic, which maintains a straight line around the curvature of the Earth
+
 ---
 
 <!-- .slide: data-background-image="images/map_plot2.png" data-background-size="auto 95%" -->
+
+notes:
+now even the blue line has some curvature because we are picking a best-of-both-worlds Mollweide projection that doesn't perfectly preserve angle or area.
 
 ---
 
