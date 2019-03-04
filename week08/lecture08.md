@@ -245,6 +245,9 @@ Greenland and Antarctica are HUGE
 
 <!-- .slide: data-background-image="images/transversemercator_tissot.png" data-background-size="auto 95%" -->
 
+notes:
+this projection is most accurate near the vertical center line
+
 ---
 
 <!-- .slide: data-background-image="images/lambertcylindrical.png" data-background-size="auto 95%" -->
@@ -252,6 +255,11 @@ Greenland and Antarctica are HUGE
 ---
 
 <!-- .slide: data-background-image="images/lambertcylindrical_tissot.png" data-background-size="auto 95%" -->
+
+notes:
+Also known as "equirectangular", this is the favorite format of NASA because it's mathematically straightforward.
+
+Note that the very top line of the image represents a single point on the globe.
 
 ---
 
@@ -261,6 +269,9 @@ Greenland and Antarctica are HUGE
 
 <!-- .slide: data-background-image="images/mollweide_tissot.png" data-background-size="auto 95%" -->
 
+notes:
+this is considered a good compromise between shape-preserving and angle preserving - but it's not perfect at either.
+
 ---
 
 <!-- .slide: data-background-image="images/sinusoidal.png" data-background-size="auto 95%" -->
@@ -269,6 +280,9 @@ Greenland and Antarctica are HUGE
 
 <!-- .slide: data-background-image="images/sinusoidal_tissot.png" data-background-size="auto 95%" -->
 
+notes:
+this has even less distortion than mollweide, but the pointy ends don't feel very elegant and planet-like
+
 ---
 
 <!-- .slide: data-background-image="images/gnomonic.png" data-background-size="auto 95%" -->
@@ -276,6 +290,9 @@ Greenland and Antarctica are HUGE
 ---
 
 <!-- .slide: data-background-image="images/gnomonic_tissot.png" data-background-size="auto 95%" -->
+
+notes:
+this is another nightmare scenario like Mercator that was initially created for navigation. Straight lines on this map are the shortest route, but area, shape, and size are distorted.
 
 ---
 
