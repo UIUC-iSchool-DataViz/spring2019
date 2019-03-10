@@ -10,8 +10,8 @@ visible_n: true
 
 # Data Visualization
 <div style="height: 6.0em;"></div>
-## Jill P. Naiman
-## Spring 2019 (Online)
+## AJ Christensen
+## Spring 2019
 ## Lecture 8
 
 ---
