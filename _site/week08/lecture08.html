@@ -125,9 +125,37 @@
 
 # Data Visualization
 <div style="height: 6.0em;"></div>
-## AJ Christensen
-## Spring 2019
+## Jill P. Naiman
+## Spring 2019 (Online)
 ## Lecture 8
+
+---
+
+## Quick announcements
+
+Unless it is absolutely impossible, please post your questions in the Slack channel first.
+
+This will help keep me from having to repeat answers in emails and get you help more quickly.
+
+Sharing is caring! :)
+
+---
+
+## Quick announcements
+
+Limited internet availability March 15-24.
+
+---
+
+## Quick announcements
+
+Homework grades coming!
+
+---
+
+## Warm-Up to the Warm-Up activity
+
+ * https://zzzev.com/movies
 
 ---
 
@@ -137,7 +165,8 @@
  1. What are its methods?
  1. What are the strengths / weaknesses?
 
- * Image on following slide is from https://wapo.st/2HVLqUw
+
+ (Image on following slide is from https://wapo.st/2HVLqUw)
 
 ---
 
@@ -148,11 +177,18 @@
 ## Today
 
  * Evaluating Visualization Systems
- * Markdown (leading up to Idyll)
+ * Markdown (leading up to Idyll next week)
  * Maps
    * Projections
    * Coordinate Systems
    * Plotting with CartoPy
+
+---
+
+</br>
+</br>
+</br>
+# Topic 1: Evaluating Visualization Engines
 
 ---
 
@@ -162,6 +198,8 @@
  * Functionality
  * Aesthetics
 
+notes: is this engine free or do you have to pay for it?  Does it do what I want?
+Does its plots look like plots I want to make?
 
 ---
 
@@ -170,7 +208,7 @@
  * Can I get ahold of this software?
  * Do I install it, or do I use it on a server?
  * What's the user interface like?
- * Is it declarative or is it procedural?
+ * Is it declarative or is it imperative (procedural)?
 
 ---
 
@@ -179,7 +217,7 @@
  * What can you do with the software?
  * Can you study the software?
  * Who can you share it with?
- * Who can you give your derivative works to?
+ * Who can you give your visualization derivative works to?
 
 ---
 
@@ -188,6 +226,13 @@
  * Copyleft: share and share-alike
  * Non-copyleft: share, but don't necessarily need to share-alike
  * https://choosealicense.com/
+
+notes: this website has a bunch of "auto" generated licences, depending on what kind of license
+you want *your* software to use
+
+If you are ever in a position to create software, you can check this out to see what sorts of options you have.
+
+Also, many of the open source packages we'll be using (including python) use a specific kind of license.  A lot of folks use the MIT licenses, fyi.
 
 ---
 
@@ -198,6 +243,10 @@
  * Can the data be redistributed, remixed, modified?
  * http://opendefinition.org/guide/data/
  * https://theodi.org/guides/publishers-guide-open-data-licensing
+
+notes: additionally, the data might have a specific license.  So maybe you can use the data for your viz, but not share the data itself with others.
+
+How can the data be modified?  Can you share the modified data?
 
 ---
 
@@ -214,7 +263,7 @@
 How do you interact with the software?
 
  * Declarative: how do you want the plot to look?
- * Procedural: what are the steps to make the plot look that way?
+ * Imperative/Procedural: what are the steps to make the plot look that way?
 
 ---
 
@@ -238,13 +287,30 @@ Chart(df).mark_bar().encode(
 The "cost" of software is not exclusively the number of dollars you place on
 the counter when you get a big cardboard box with marketing blurbs on the side.
 
+
+---
+
+## Evaluation: Costs
+
+The "cost" of software is not exclusively the number of dollars you place on
+the counter when you get a big cardboard box with marketing blurbs on the side.
+
 Think about cost in several ways:
 
  * Monetary cost for *you* to use the software
  * Monetary cost for *someone else* to view your creations
- * Temporal cost of setting up
+ * Time cost of setting up the software/system
  * Cognitive cost for learning and using the system (documentation matters!)
  * Transmission cost for sharing your creations
+
+---
+
+## Evaluation: Aesthetics
+
+Visualization is trendy.
+
+When you construct something, think about the different ways it will be
+interpreted:
 
 ---
 
@@ -262,6 +328,13 @@ interpreted:
 
 ---
 
+</br>
+</br>
+</br>
+# Topic 2: Markdown -> Idyll
+
+---
+
 ## Markdown
 
 We'll be using markdown a bit in this course, and even more so as we move
@@ -275,7 +348,46 @@ provide indications of formatting:
 
 ---
 
+## Idyll
+
+ * The editor: https://idyll-lang.org/editor
+ * Examples: https://idyll-lang.org/gallery
+   * a favorite: https://idyll-lang.org/gallery/the-d-i-y-data-of-fugazi
+   * source code: https://github.com/mathisonian/diy-data-fugazi
+
+---
+
+## Idyll
+
+ * The editor: https://idyll-lang.org/editor
+ * Examples: https://idyll-lang.org/gallery
+   * a favorite: https://idyll-lang.org/gallery/the-d-i-y-data-of-fugazi
+   * source code: https://github.com/mathisonian/diy-data-fugazi
+
+Install for next week/after spring break: https://idyll-lang.org/docs/getting-started
+
+---
+
+</br>
+</br>
+</br>
+# Topic 3: Maps (& more on lying with data)
+
+---
+
 ## Maps
+
+Thinking about map projections is important for GIS data, and generic global info viz.
+
+Let's start by thinking about the fact that...
+
+---
+
+## Maps
+
+Thinking about map projections is important for GIS data, and generic global info viz.
+
+Let's start by thinking about the fact that...
 
 The Earth is a sphere.
 
@@ -319,6 +431,17 @@ will be minimized:
  * Shape (Conformal)
  * Distance
 
+---
+
+## Projections: Common Preservations
+
+Typically, one or more of these will be preserved, or at least, the distortion
+will be minimized:
+
+ * Area
+ * Shape (Conformal)
+ * Distance
+
 There are other properties that can be preserved, as well.  Typically, maps
 will be a "compromise" between preserving different properties.
 
@@ -340,6 +463,11 @@ conformal = shape preserving (at the expense of accurate size)
 We can characterize distortions in a projection by examining how a known shape
 appears on them.  The Tissot Ellipse of Distortion is a method of showing this
 by drawing circles of a fixed radius and examining their elliptical distortion.
+
+<img src="images/Tissot_indicatrix_world_map_Mercator_proj.svg" height="400">
+
+notes: so here for example, we see that the mercator projection has circles that
+stay circles, though they change in relative size depending on where they are on the map
 
 ---
 
@@ -422,7 +550,7 @@ another?
 
 ## Discussion
 
-<iframe width="1024" height="576" src="https://www.youtube.com/embed/vVX-PrBRtTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1024" height="576" src="https://www.youtube.com/embed/vVX-PrBRtTY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 notes:
 after watching this, it's useful to know that the Peters projection is actually flawed as a teaching tool because of how much it distorts the shapes of countries near the poles.
@@ -446,24 +574,32 @@ Why is Europe at the center of all the maps we've looked at?
 
 ## Discussion
 
-<img src="Azimuthal_equidistant_projection.jpg" width="1024"/>
+<img src="images/Azimuthal_equidistant_projection.jpg" width="512"/>
+
+notes: there is nothing specifically wrong with putting a pole at the center of the map
 
 ---
 
 ## Discussion
 
-<img src="Azimuthal_equidistant_tissot.png" width="1024"/>
+<img src="images/Azimuthal_equidistant_tissot.png" width="512"/>
+
+notes: also see here that now the equator is very distorted
 
 ---
 ## Discussion
 
-<img src="Waterman_projection.png" width="1024"/>
+<img src="images/Waterman_projection.png" width="512"/>
+
+notes: or why bother having a spherical or rectangular shape at all?
 
 ---
 
 ## Discussion
 
-<img src="Waterman_tissot.png" width="1024"/>
+<img src="images/Waterman_tissot.png" width="512"/>
+
+notes: look how here there is very little distortion of size or shape
 
 ---
 
@@ -514,7 +650,7 @@ ax = fig.add_subplot(111, projection=cartopy.crs.Mollweide())
 ax.coastlines()
 ```
 
-What does this do?
+<!--What does this do?-->
 
 ---
 
@@ -570,27 +706,30 @@ now even the blue line has some curvature because we are picking a best-of-both-
 
 ---
 
-## Assignment 7: Evaluating Visualization Engines
+## <span style="font-size:22pt">Assignment 7: Evaluating Visualization Engines - Part 1</span>
 
-Your assignment is to pick three of the following possibilities and write up a
-set of comparisons for constructing the *same* visualization.
+<span style="font-size:18pt">Your assignment is to pick three of the following possibilities and write up a
+set of comparisons for constructing the *same* visualization.</span>
+ * <span style="font-size:14pt">Matplotlib</span>
+ * <span style="font-size:14pt">Bokeh</span>
+ * <span style="font-size:14pt">Plotly</span>
+ * <span style="font-size:14pt">D3 / Vega / Vega-lite / Altair</span>
+ * <span style="font-size:14pt">bqplot</span>
+ * <span style="font-size:14pt">R / RStudio</span>
 
- * Matplotlib
- * Bokeh
- * Plotly
- * D3 / Vega / Vega-lite / Altair
- * bqplot
- * R / RStudio
+<span style="font-size:18pt">These comparisons should be:</span>
+ * <span style="font-size:14pt">What is the license for the software?</span>
+ * <span style="font-size:14pt">What is the focus of the software?</span>
+ * <span style="font-size:14pt">Does it have interactivity, and how easy is it?</span>
+ * <span style="font-size:14pt">What are the pros and cons of using it?</span>
 
-These comparisons should be:
+---
 
- * What is the license for the software?
- * What is the focus of the software?
- * Does it have interactivity, and how easy is it?
- * What are the pros and cons of using it?
+## <span style="font-size:22pt">Assignment 7: Evaluating Visualization Engines - Part 2</span>
 
+<span style="font-size:18pt">Install Idyll</span>
 
-
+ * https://idyll-lang.org/editor
           </script>
         </section>
       </div>
