@@ -325,6 +325,17 @@ Public narrative = what makes an interesting story and provides context
 
 ---
 
+## Visualization for the Public
+
+ * [Election Forecast - fivethirtyeight](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/senate/)
+ * [Online Dating - okCupid](https://theblog.okcupid.com/exactly-what-to-say-in-a-first-message-2bf680806c72)
+ * [DiCaprio Love Life - reddit](https://www.reddit.com/r/dataisbeautiful/comments/azjti7/leonardo_dicaprio_refuses_to_date_a_woman_over_25/)
+
+notes:
+What are the narratives of these visualizations? How are they different than just a list of facts?
+
+---
+
 ## Idyll
 
 A HTML-based system for storytelling with data visualizations
