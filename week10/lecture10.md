@@ -48,6 +48,17 @@ As the designer, you know what choices you have made, so "elegant design" isn't 
 
 ## Viz for Self
 
+<img src="images/walsh.gif" width="700"/>
+
+notes:
+I think this is a great example. We used 3D software to make a 2D plot, and arranged points to look like a bar chart even though they were rendered as individual points - aka a scatter plot.
+
+It just had to work, and we used the most convenient software.
+
+---
+
+## Viz for Self
+
 Let's talk about exploration.
 
  * What are characteristics of data that would influence how you visualize it?
@@ -101,12 +112,66 @@ shortcut ideas ... subsampling, delete unused fields, use a simpler tool, manual
 
 ## Viz for Experts
 
-To design a visualization for your peers, you need to step back and think about
-the common shared language you have with them.
+To design a visualization for experts, you need to analyze how they process information.
 
  * What do they know?
  * What conventions will they assume?
  * Are they able to fill in the blanks of information?
+
+---
+
+## Viz for Experts
+
+<img src="images/sci_tornado.png" width="700"/>
+
+notes:
+Here's a series of visualizations made by or for domain experts that I just had lying around on my laptop.
+
+What are some things you notice they have in common?
+
+---
+
+## Viz for Experts
+
+<img src="images/sci_canup.png" width="350"/>
+
+notes:
+Here's a series of visualizations made by or for domain experts that I just had lying around on my laptop.
+
+What are some things you notice they have in common?
+
+---
+
+## Viz for Experts
+
+<img src="images/sci_convection.png" width="700"/>
+
+notes:
+Here's a series of visualizations made by or for domain experts that I just had lying around on my laptop.
+
+What are some things you notice they have in common?
+
+---
+
+## Viz for Experts
+
+<img src="images/sci_flu.png" width="700"/>
+
+notes:
+Here's a series of visualizations made by or for domain experts that I just had lying around on my laptop.
+
+What are some things you notice they have in common?
+
+---
+
+## Viz for Experts
+
+<img src="images/sci_genes.png" width="700"/>
+
+notes:
+Here's a series of visualizations made by or for domain experts that I just had lying around on my laptop.
+
+What are some things you notice they have in common?
 
 ---
 
@@ -338,7 +403,82 @@ What are the narratives of these visualizations? How are they different than jus
 
 ## Idyll
 
-A HTML-based system for storytelling with data visualizations
+A web-based toolkit for storytelling with data visualizations!
+
+ * Reduce manual coding for interactive articles
+ * Integration with D3.js
+
+---
+
+## [D3.js](https://github.com/d3/d3/wiki/Gallery)
+
+A JavaScript library for web-based data visualization
+
+ * Declarative, not imperative (this is better for web coding)
+ * Dynamic and interactive
+ * Smooth transitions
+
+---
+
+## D3.js
+
+<img src="images/words.png" width="700"/>
+
+notes:
+D3 is meant to be well-integrated into the existing infrastructure of the internet. The worldwide web is a real patchwork of different languages with different syntaxes meant to do different things. Don't let it overwhelm you. They tend to be pretty simple to start, and only get more complicated when you need them to.
+
+---
+
+## D3.js
+
+<img src="images/html.png" width="700"/>
+
+notes:
+HTML or Hypertext Markup Language is the default syntax for websites. It's meant to be structured with tags like "head", "body", "paragraph", and "division". 
+
+It's essentially a skeleton for other functionality to hang off of.
+
+You may see the term DOM or Document Object Model. This is just another name for this skeleton/framework.
+
+---
+
+## D3.js
+
+<img src="images/css.png" width="700"/>
+
+notes:
+CSS or cascading style sheets are how you define how websites are formatted. They do color, indentation, drop shadows, etc. Each CSS call is attached to an HTML tag.
+
+CSS can be called in-line, or from an external file dedicated exclusively to CSS code.
+
+---
+
+## D3.js
+
+<img src="images/svg.png" width="700"/>
+
+notes:
+SVG or Scalable Vector Graphics is an XML-based implementation of vector shape drawing that's natively understood by website compilers. It's an easy way to include dynamically rendered, animated, or interactive imagery in a webpage.
+
+---
+
+## D3.js
+
+<img src="images/javascript.png" width="700"/>
+
+notes:
+JavaScript is a dynamic programming language that runs natively on webpages. If you want to run programming logic in a webpage, you use javascript. If you see interactivity or animated effects on a website, you can generally expect they were written in javascript. 
+
+---
+
+## Idyll
+
+Most of this is hidden from you when writing in Idyll! But it helps to understand the underlying mechanisms.
+
+We will be using D3.js and Idyll for the Final Project to share interactive visualizations connected in a narrative.
+
+notes:
+what are the limits to data size in Idyll and the web browser?
 
 ---
 
