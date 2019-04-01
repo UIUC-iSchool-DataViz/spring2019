@@ -78,7 +78,7 @@ What can a visualization designer get wrong?
 notes:
 Any other ideas?
 
---- 
+---
 
 ## Methods of Validation
 
