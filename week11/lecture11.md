@@ -88,7 +88,7 @@ Before developing your visualization system:
  1. Justify interaction design plans against the academic literature and existing tools
  1. Do an analysis of the complexity of the system
 
---- 
+---
 
 ## Methods of Validation
 
@@ -177,7 +177,7 @@ Cons:
  * Visualization tools not automatically built in
  * More effort because they're meant for whole websites
 
---- 
+---
 
 ## Idyll
 
@@ -247,7 +247,7 @@ Cons:
 
 <img src="images/blanket.jpg" width="400"/>
 
---- 
+---
 
 ## Technical Limitations
 
