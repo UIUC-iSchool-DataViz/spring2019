@@ -245,6 +245,8 @@ Cons:
  * Blankets
  * Whatever you can think of (instructables.com)
 
+<img src="images/blanket.jpg" width="400"/>
+
 --- 
 
 ## Technical Limitations
