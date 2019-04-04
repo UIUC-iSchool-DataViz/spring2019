@@ -25,8 +25,8 @@ branch: gh-pages
 # Build settings
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-#theme: jekyll-theme-dinky
-theme: jekyll-theme-hacker
+theme: jekyll-theme-dinky
+#theme: jekyll-theme-hacker
 #remote_theme: dbtek/dbyll
 #remote_theme: "renyuanz/leonids"
 plugins:
