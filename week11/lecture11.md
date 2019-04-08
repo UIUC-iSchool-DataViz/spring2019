@@ -2,14 +2,16 @@
 title: Lecture 11
 layout: lecture
 include_vega: true
+visible_lec: true
+visible_n: true
 ---
 
 <!-- .slide: class="titleslide" -->
 
 # Data Visualization
 <div style="height: 6.0em;"></div>
-## AJ Christensen
-## Spring 2019
+## Jill P. Naiman
+## Spring 2019 (Online)
 ## Lecture 11
 
 ---
@@ -24,7 +26,9 @@ include_vega: true
 
 ---
 
-# April 22nd at NCSA
+## If you are on campus: April 22nd at NCSA, 9:30am
+
+In-person class is having live demos from the Advanced Visualization Lab.  Feel free to join!
 
 We will meet in 1005 on the ground floor.
 
@@ -37,6 +41,7 @@ The address is 1205 W Clark St, just north of the Siebel computer science buildi
  * Validation
  * Publishing
  * More on Idyll
+ * github.io pages
 
 ---
 
@@ -104,7 +109,7 @@ After developing your visualization prototype:
 
  1. Measure system performance
  1. Usability studies (formal and/or informal)
- 1. Measure human time to complete a task, or number of user erros
+ 1. Measure human time to complete a task, or number of user errors
  1. Do a field study - perhaps even collect user data with the system
 
 notes:
@@ -128,9 +133,21 @@ The Advanced Visualization Lab interacts with audiences through lab demos and co
 
 ---
 
+## Example informal Validation: AVL
+
+<img src="images/inf_val.jpg" width="800"/>
+
+notes: here is an example of an informal validataion that the AVL does a lot of.  
+
+Here the data visualizers are doing a showing of their movie and asking audiences for feedback - both on what they liked and didn't like, but also on what they learned.
+
+---
+
 ## Validation in Final Project
 
-Your peers will ask you questions at the end of your presentation. Try to understand what is working for them and what is not. It will help hone your instincts.
+Your peers will ask you questions at the end of your presentation. 
+
+Try to understand what is working for them and what is not. It will help hone your instincts.
 
 ---
 
@@ -152,13 +169,15 @@ Your stunning visualizations will do no one any good if they reside only on your
  * Idyll
  * GitHub Pages
  * Social Media
+ 
+notes: we'll be mostly playing with idyll and github pages, but we'll also make a bit of content that you can share on social media (your webpages certainly can be shared)
 
 ---
 
 ## Raw HTML, CSS, SVG, and JavaScript
 
 Pros:
- * Less of a learning curve
+ * Less of a learning curve for individual parts (though, more to put them into a final webpage)
  * Lots of documentation
 
 Cons:
@@ -206,7 +225,7 @@ Pros:
 Cons:
  * Less common syntax (Markdown)
  * Not well-documented
- * No guarantee of long-term support in the future
+ * open source means less guarantee of long-term support in the future
 
 <img src="images/idyll.png" width="200"/>
 
@@ -220,7 +239,7 @@ Pros:
 
 Cons:
  * Community driven (there can be bugs and surprises)
- * All websites are static
+ * You only get the one webpage
 
 <img src="images/githubpages.jpeg" width="200"/>
 
@@ -232,6 +251,7 @@ How can visualization be distributed on social media?
  * Images can be shared everywhere
  * Embedded videos using YouTube, Vimeo, FB video, etc
  * [SketchFab](https://sketchfab.com) scenes can be shared on Reddit, Facebook, and Twitter
+ * Your webpages can be linked of course!
 
 notes:
 The internet is visual, and increasingly about video (or at least animated gif)
@@ -247,7 +267,7 @@ Pros:
  * Easy to target the communities you're trying to communicate with
 
 Cons:
- * Limited functionality, especially wrt interactivity
+ * Limited functionality, especially with respect to interactivity
  * Visualizations have shorter expiration date
  * No quality control
 
@@ -301,6 +321,8 @@ You still need to make a visualization that even a very small child will underst
 
 <img src="images/wwt.png" width="800"/>
 
+Image from <a href="http://worldwidetelescope.org/webclient/">World Wide Telescope</a>
+
 notes:
 This is how you can reach people through their phones and popular new media like virtual reality.
 
@@ -308,13 +330,19 @@ This is how you can reach people through their phones and popular new media like
 
 ## Making Visualization
 
- * 3D printing 
- * Printed leggings
+ * 3D printing (check out [Thingiverse](https://www.thingiverse.com/) or a [NASA 3D print](https://nasa3d.arc.nasa.gov/detail/cassiopeiaA))
+ * Printed leggings (check out [Bags of Love](https://www.bagsoflove.com/))
  * Blankets
  * Whatever you can think of 
     * Visit [Instructables.com](https://instructables.com) for ideas!
 
-<img src="images/blanket.jpg" width="400"/>
+<img src="images/blanketAndLeggings.png" width="800"/>
+
+notes: here the blanket is the daily temperature recorded every day for a year 
+
+the leggings are a scientific viz - the leg on the left is density and the right is temperature, taken from a simulation of stars forming in a gaseous region
+
+with 3D printing, you can make "surfaces" in your dataset (more on that when we chat about scientific viz) and then 3D print these things
 
 ---
 
@@ -331,24 +359,184 @@ This is how you can reach people through their phones and popular new media like
 
 ---
 
+## Idyll Motivation: Interactive articles
+
+Pros:
+ * More engaging for readers
+ * Large audience and acclaim
+ * Potentially more efficient for learning about new topics
+
+Cons:
+ * Hard and expensive to create
+ * Custom Javascript and HTML
+ * Difficult to design and implement well
+ * Hard to work with editorial collaborators (not in CMS’s)
+
+---
+
+## Idyll: getting your viz on the web
+
+We'll be using github pages (github.io) to do this.
+
+The steps will be:
+
+ * Create the repository ```[username].github.io``` 
+ * Clone this repository
+ * Fill it with your Idyll build
+ * Push your repository
+ * PROFIT
+
+---
+
+## ~~Idyll~~ Jupyter notebooks: getting your viz on the web
+
+We'll be using github pages (github.io) to do this.
+
+The steps will be:
+
+ * Create the repository ```[username].github.io``` 
+ * Clone this repository
+ * Fill it with your ~~Idyll build~~ Jupyter notebook & dataset
+ * Push your repository
+ * Use [mybinder.org](https://mybinder.org/) to create a link to your notebook
+ * PROFIT
+
+notes: the process for building a jupyter notebook will be very much the same, the steps are just a little different
+
+---
+
+## github.io for publishing
+
+Step 1: Create/login to your github account
+
+(We'll also do this "live" in the coding section of class)
+
+---
+
+## github.io for publishing
+
+Step 2: Create new repository
+
+<img src="images/githubio1.png" width="800"/>
+
+---
+
+## github.io for publishing
+
+Step 2: Create new repository
+
+<img src="images/githubio1_nm.png" width="800"/>
+
+---
+
+## github.io for publishing
+
+Step 3: Name your new repository as ```[username].github.io```
+
+<img src="images/githubio2_nm.png" width="800"/>
+
+---
+
+## github.io for publishing
+
+Step 3: Name your new repository as ```[username].github.io```
+
+<img src="images/githubio2.png" width="800"/>
+
+notes: the name is important here!!
+
+---
+
+## github.io for publishing
+
+Step 4: Clone your repository
+
+<img src="images/githubio3_nm.png" width="800"/>
+
+---
+
+## github.io for publishing
+
+Step 4: Clone your repository
+
+<img src="images/githubio3.png" width="800"/>
+
+notes: make note of your git name, we'll use this for "cloning" our github repo
+
+---
+
+## github.io for publishing
+
+Step 5: Clone your repository
+ * In command line do: ```git clone YOUR_REPO_LINK```
+
+Step 6: Copy contents of your Idyll build to this directory
+ * ```cp -r MY_IDYLL_FILE/build MY_REPO_DIR```
+
+---
+
+## github.io for publishing
+
+Step 7: Add these files to your repo officially
+ * ```git add -A```
+ 
+Step 8: Commit these files (say what you are doing)
+ * ```git commit -m "my first add"
+ 
+Step 9: Push to your online repo
+ * ```git push```
+ 
+Step 10: wait for your website to build and then check it out!
+ * Link: ```https://YOUR_GITHUB_USER_NAME.github.io/```
+
+---
+
+## github.io for publishing Jupyter notebooks
+
+Steps are essentially the same, but instead of your Idyll build directory, you add in your notebook file.
+
+Then, you need to link this on [mybinder.org](https://mybinder.org)
+
+---
+
+## github.io for publishing Jupyter notebooks
+
+<img src="images/binderLook.png" width="800"/>
+
+notes: Here, we just put in a link to our "home" github.io page and we also put a link to our specific notebook file
+
+Then we can press "launch" and away we go!
+
+Also, for some cases you can use "nbviewer" to render notebooks.  However, this doesn't work with the latest version of ipywidgets and bqplot. Hopefully that will change soon!
+
+---
+
 ## Final Project: Part 2
 
-Due by class on April 15th, submitted via Moodle in a Jupyter notebook.
+Due by class on April 11th, submitted via Moodle in a Jupyter notebook.
 
-As a group you should submit:
+*Using your dataset from Part 1:*
+
+Submit code and a writeup (either seperate or within the notebook):
 
 Code:
- * Jupyter notebook with an interactive dashboard that helps an expert explore your dataset thoroughly. There should be 4 linked visualizations all exploring the same dataset and all visible at the same time. (3 linked visualizations for teams of 3.)
+ * Jupyter notebook with an interactive dashboard that helps an expert explore your dataset thoroughly. 
+ * There should be a "dashboard" type aspect to this - i.e. a linked view exploring your dataset in an interactive way
  * Do not delete any cells, just comment them out. Show your work.
 
 ---
 
 ## Final Project: Part 2 (cont)
 
-As a group you should submit:
+Also submit:
 
 Prose:
  * One paragraph explaining how to use the dashboard you created, to help someone who is not an expert understand your dataset. 
- * A list of 5 (or more) contextual datasets you have identified, links to where they reside, and a sentence about why they might be useful in telling the final story.
- * A brief description of which group members completed which tasks. There should be an equal division of labor. Each group member will be graded based on how well they completed their tasks. If one group member clearly does less work, they may receive a grade deduction.
+ * A list of 1 or more contextual datasets you have identified, links to where they reside, and a sentence about why they might be useful in telling the final story.
+ 
+ Per usual, we will have a group google doc for this assignment.  
+
+---
+
+## Let's get into some Idyll & publishing!
 

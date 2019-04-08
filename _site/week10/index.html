@@ -52,50 +52,51 @@ ended with discussion about the Idyll framework.</p>
   <li><a href="data/corgiData.json" download="">Example dataset for Idyll build</a></li>
 </ul>
 
-<h1 id="macunixlinux-install-instructions">Mac/Unix/Linux install instructions:</h1>
+<h2 id="beginning-idyll-code">Beginning Idyll code</h2>
 
-<p>For non-Unix operating systems, you can run these commands from a <a href="https://www.cygwin.com">Cygwin</a> terminal.</p>
+<ul>
+  <li>We will be heavily modifying you’re default : the <a href="idyll_website/index.idyll" download="">index.idyll</a> file.  I’ve included my notes in that download if its easier to follow along that way.</li>
+  <li>Also, check that the package.json file matchs <a href="idyll_website/package.json" download=""> the one right here</a>.</li>
+</ul>
+
+<h3 id="general-install-instructions">General install instructions:</h3>
+
+<p>A video of this process (with errors &amp; explaination) for Macs can be <a href="https://youtu.be/mWxXmWk_vDU">found right here</a>.</p>
+
+<p>A video of this process (with errors &amp; explaination) for Windows 10 can be <a href="https://youtu.be/nQ2FFGzREos">found right here</a> (and see notes at the end of this section).</p>
 
 <ol>
-  <li>Install idyll with:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm: npm install -g idyll
+  <li>Install Idyll:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g idyll
 </code></pre></div>    </div>
-    <p>(the -g is to install globally - you probably need root access.  If you don’t have root access, then leave out the -g and make a note of where idyll installs.  When I say “idyll” you will have to provide the entire path like <code class="highlighter-rouge">/Users/achrist3/LOCATION/idyll</code>)</p>
   </li>
-  <li>Run idyll:
+  <li>Create new post with idyll
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>idyll create
 </code></pre></div>    </div>
-    <p>(select a directory and post name)</p>
   </li>
-  <li>cd into your post directory</li>
-  <li>type
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>idyll
+  <li>cd into post directory</li>
+  <li>Install dependencies to install vegalite
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save acorn@^6.0.0 vega-lite@^2.0.0 react@^16.0.0 react-dom@^16.0.0 vega@^3.3.1
 </code></pre></div>    </div>
-    <p>to build and run</p>
   </li>
-  <li>install vega-lite for idyll, in your post directory run:
+  <li>Install vegalite for Idyll
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save idyll-vega-lite
 </code></pre></div>    </div>
-    <p>you will probably get some errors about dependencies not being installed</p>
   </li>
-  <li>To fix these dependencies run:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save acorn@^6.0.0 vega-lite@^2.0.0 react@^15.5.4 react-dom@^15.5.4 vega@^3.0.0
-</code></pre></div>    </div>
-    <p>(or what ever packages you are missing)</p>
-  </li>
-  <li>Re run the vega-lite install to double check:
-<code class="highlighter-rouge">npm install --save idyll-vega-lite</code></li>
-  <li>You will want the latest version of react, so you can do:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save react@^16.0.0 react-dom@^16.0.0
-</code></pre></div>    </div>
-  </li>
-  <li>Try replacing your index.idyll file with this <a href="idyll_website/index.idyll">index.idyll file attached</a></li>
-  <li>Replace your package.json file with this one <a href="idyll_website/package.json">package.json file attached above</a></li>
-  <li>Re-compile and run:
+  <li>Copy <a href="idyll_website/index.idyll" download="">index.idyll</a> to your post directory</li>
+  <li>Update <a href="idyll_website/package.json" download="">package.json</a> file to match the linked one</li>
+  <li>Build this website with
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>idyll
 </code></pre></div>    </div>
   </li>
 </ol>
+
+<p><strong>Notes for Windows install:</strong></p>
+
+<ul>
+  <li>You need to have Nodejs installed - <a href="https://nodejs.org/en/download/">download link here</a>. You will have to restart your computer.</li>
+  <li>You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.</li>
+</ul>
 
 <h1 id="final-project-resources">Final Project Resources</h1>
 
@@ -131,7 +132,35 @@ ended with discussion about the Idyll framework.</p>
 
 <ul>
   <li><a href="corg/grabCorgData.py">Webscrape Python code for this week’s dataset</a></li>
+  <li><a href="chatWindowHist.txt">Chat window text from missed recording on Thursdays class</a></li>
 </ul>
+
+<p><strong>Long form Idyll install instructions more Macs/Unix/Linux:</strong></p>
+
+<ol>
+  <li>Install idyll with: <code class="highlighter-rouge">npm: npm install -g idyll</code> (the -g is to install globally - you probably need root access.  If you don’t have root access, then leave out the -g and make a note of where idyll installs.  When I say “idyll” you will have to provide the entire path like <code class="highlighter-rouge">/Users/achrist3/MYINSTALLLOCATION/idyll</code>)</li>
+  <li>Run idyll: <code class="highlighter-rouge">idyll create</code> (select a directory and post name)</li>
+  <li>cd into your post directory</li>
+  <li>type <code class="highlighter-rouge">idyll</code> to build and run</li>
+  <li>install vega-lite for idyll, in your post directory run:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save idyll-vega-lite
+</code></pre></div>    </div>
+    <p>you will probably get some errors about dependencies not being installed</p>
+  </li>
+  <li>To fix these dependencies run:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save acorn@^6.0.0 vega-lite@^2.0.0 react@^15.5.4 react-dom@^15.5.4 vega@^3.0.0
+</code></pre></div>    </div>
+    <p>(or what ever packages you are missing)</p>
+  </li>
+  <li>Re run the vega-lite install to double check: <code class="highlighter-rouge">npm install --save idyll-vega-lite</code> and you should have less errors</li>
+  <li>You will want the latest version of react, so you can do:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save react@^16.0.0 react-dom@^16.0.0
+</code></pre></div>    </div>
+  </li>
+  <li>Try replacing your index.idyll file with the <a href="idyll_website/index.idyll">index.idyll file attached above</a></li>
+  <li>Check your package.json file and make sure it reacts like the <a href="idyll_website/package.json">package.json file attached above</a></li>
+</ol>
+
 
 
         <h3>Materials</h3>
@@ -169,6 +198,13 @@ ended with discussion about the Idyll framework.</p>
         
         
         
+        
+        
+        
+        
+        
+        <li>Week 10 - Iterative Design, Idyll: (<a href="/spring2019/week10/index_archive.html">view</a>,
+          <a href="http://github.com/UIUC-iSchool-DataViz/spring2019/blob/gh-pages/week10/index_archive.md">source</a>)</li>
         
         
         
@@ -269,21 +305,7 @@ ended with discussion about the Idyll framework.</p>
         
         
         
-        <li>Notebook examples_week10: 
-         (<a href="../nbv.html?notebook_name=%2Fspring2019%2Fweek10%2Fexamples_week10.ipynb">view</a>,
-         <a href="/spring2019/week10/examples_week10.ipynb">download</a>)</li>
         
-        
-        
-        <li>Notebook inClass_week10_sciviz: 
-         (<a href="../nbv.html?notebook_name=%2Fspring2019%2Fweek10%2FinClass_week10_sciviz.ipynb">view</a>,
-         <a href="/spring2019/week10/inClass_week10_sciviz.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook prep_notebook_week10: 
-         (<a href="../nbv.html?notebook_name=%2Fspring2019%2Fweek10%2Fprep_notebook_week10.ipynb">view</a>,
-         <a href="/spring2019/week10/prep_notebook_week10.ipynb">download</a>)</li>
         
         
         
