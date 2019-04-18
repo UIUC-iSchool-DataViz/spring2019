@@ -46,10 +46,14 @@ http://scienceofhiv.org/
  * Real-time vs Pre-Rendered graphics
  * Frames vs Timesteps
 
+<img src="images/timestepframestep.gif" width="600"/>
+
 notes:
 real-time graphics refresh the screen faster than the eye perceives, usually at least 30 times a second. Pre-rendered can take all the time in the world.
 
 Frames are individual images that when strung together in time create the illusion of motion. They are the "timesteps" of a movie. But scientific data also have "timesteps" which may not be synchronized with the speed of the movie.
+
+You'll notice in this GIF, the frame rate and the time step rate are different.
 
 ---
 
@@ -70,12 +74,16 @@ Frames are individual images that when strung together in time create the illusi
  * 48 FPS, 60 FPS - video games, interactive graphics, virtual reality
  * 120 FPS - really good virtual reality
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pfiHFqnPLZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 notes:
 24 fps is considered the absolute minimum necessary frequency so that people don't perceive individual frames.
 
 48 fps is widely considered so fast the human eye can't perceive any separation at all - but 60 fps is safer.
 
 if you watch a TV and it seems distractingly smooth, it's probably doing frame interpolation to make 30fps content play back at 60fps.
+
+This youtube video actually only plays at 60FPS, so the 120 ball is kind of pointless.
 
 ---
 
@@ -84,6 +92,8 @@ if you watch a TV and it seems distractingly smooth, it's probably doing frame i
  * 1024 x 768 - standard definition or SD (3:4)
  * 1920 x 1080 - high definition or HD (16:9)
  * 3840 x 2160 - ultra high definition or UHD or 4k (16:9)
+
+<img src="images/resolutions.png" width="600"/>
 
 notes:
 Often people refer to these formats as 1k or 2k or 4k in graphics, referring to the number of pixels along the horizontal axis.
@@ -112,15 +122,109 @@ ProRes is only available on Apple, and DNxHD is Windows
 All 3D geometry is represented as:
 
  * Points
+
+<img src="images/points.png" width="600"/>
+
+---
+
+## 3D Geometry
+
+All 3D geometry is represented as:
+
+ * Points
+ * Edges
+
+<img src="images/edges.png" width="600"/>
+
+---
+
+## 3D Geometry
+
+All 3D geometry is represented as:
+
+ * Points
+ * Edges
+ * Surfaces
+
+<img src="images/surfaces.png" width="600"/>
+
+---
+
+## 3D Geometry
+
+All 3D geometry is represented as:
+
+ * Points
  * Edges
  * Surfaces
  * Volumes
+
+<img src="images/voxels.png" width="600"/>
 
 ---
 
 ## 3D Geometry
 
 <iframe src="https://player.vimeo.com/video/169599296?color=949494&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+notes:
+As you can see, all of these can be converted from one to the other. And you can create lots of crazy permutations.
+
+---
+
+## 3D Geometry
+
+Surfaces can be encoded as:
+
+ * Implicit primitives
+
+<img src="images/primitive.png" width="600"/>
+
+notes:
+primitives are defined by mathematical functions. This sphere is defined by a center position and a radius.
+
+---
+
+## 3D Geometry
+
+Surfaces can be encoded as:
+
+ * Implicit primitives
+ * Polygonal Meshes
+
+<img src="images/quadsSmall.jpg" width="600"/>
+
+notes:
+Quadrilaterals are a good way to see the flow of geometry, which artists like, but quads can bend.
+
+---
+
+## 3D Geometry
+
+Surfaces can be encoded as:
+
+ * Implicit primitives
+ * Polygonal Meshes
+
+<img src="images/triangles.png" width="600"/>
+
+notes:
+Triangles cannot bend because three points define a plane. So automatic geometry like the stuff you use in science is more often going to be triangles.
+
+---
+
+## 3D Geometry
+
+Surfaces can be encoded as:
+
+ * Implicit primitives
+ * Polygonal Meshes
+ * NURBS or Bezier Surfaces
+
+<img src="images/nurbs.png" width="600"/>
+
+notes:
+This is a NURBS sphere. You can see the control vertices are floating off the surface. Every patch on the surface is influenced by many of the neighboring points.
 
 ---
 
@@ -133,6 +237,24 @@ Surfaces can be encoded as:
  * NURBS or Bezier Surfaces
  * Subdivision Surfaces
 
+<img src="images/subdivs.png" width="600"/>
+
+notes:
+Subdivision surfaces are like those adaptive volumes we saw last week. You can add detail where you want it.
+
+---
+
+## 3D Geometry
+
+Datasets with many fields called "attributes":
+
+ 1. Transform Attributes (translate, rotate, scale)
+
+<img src="images/xyz.gif" width="600"/>
+
+notes:
+These transform attributes are the same for all objects.
+
 ---
 
 ## 3D Geometry
@@ -141,6 +263,11 @@ Datasets with many fields called "attributes":
 
  1. Transform Attributes (translate, rotate, scale)
  1. Shape Attributes (radius, bumpyness, twistyness)
+
+<img src="images/attributes.gif" width="600"/>
+
+notes:
+shape attributes depend totally on what the shape is.
 
 ---
 
@@ -193,6 +320,8 @@ This way, we only calculate the path of one light ray for each pixel. It's effic
 
 Houdini VEX path tracer
 
+<iframe src="https://player.vimeo.com/video/331150010" width="640" height="412" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
 ---
 
 ## Raytracing
@@ -223,12 +352,70 @@ Shaders are code that tells the renderer what something looks like. There are ma
 
 ## The Secrets of Photorealism
 
+<img src="images/dull.png" width="500"/>
+
+---
+
+## The Secrets of Photorealism
+
+ 1. Lighting changes everything - use realistic light sources
+
+<img src="images/light.png" width="500"/>
+
+---
+
+## The Secrets of Photorealism
+
+ 1. Lighting changes everything - use realistic light sources
+ 1. Photographs have motion blur - use a motion blur algorithm
+
+<img src="images/mblur.png" width="500"/>
+
+---
+
+## The Secrets of Photorealism
+
+ 1. Lighting changes everything - use realistic light sources
+ 1. Photographs have motion blur - use a motion blur algorithm
+ 1. Photographs have depth of field - use a depth of field algorithm
+
+<img src="images/dof.png" width="500"/>
+
+---
+
+## The Secrets of Photorealism
+
+ 1. Lighting changes everything - use realistic light sources
+ 1. Photographs have motion blur - use a motion blur algorithm
+ 1. Photographs have depth of field - use a depth of field algorithm
+ 1. Scenes need backgrounds - embed your dataset inside a contextual dataset
+
+<img src="images/background.png" width="500"/>
+
+---
+
+## The Secrets of Photorealism
+
+ 1. Lighting changes everything - use realistic light sources
+ 1. Photographs have motion blur - use a motion blur algorithm
+ 1. Photographs have depth of field - use a depth of field algorithm
+ 1. Scenes need backgrounds - embed your dataset inside a contextual dataset
+ 1. Indirect light is everywhere - use an ambient occlusion algorithm
+
+<img src="images/ambient.png" width="500"/>
+
+---
+
+## The Secrets of Photorealism
+
  1. Lighting changes everything - use realistic light sources
  1. Photographs have motion blur - use a motion blur algorithm
  1. Photographs have depth of field - use a depth of field algorithm
  1. Scenes need backgrounds - embed your dataset inside a contextual dataset
  1. Indirect light is everywhere - use an ambient occlusion algorithm
  1. The world is fractal - increase detail with procedural noise and instancing
+
+<img src="images/detail.png" width="500"/>
 
 ---
 
@@ -284,6 +471,27 @@ SketchFab uses WebGL to render YOUR 3D data in a 3D viewport in a web browser.
  * Blender - for developers
  * Maya - for animators
  * Houdini - for dynamics
+
+---
+
+## Scientific Viz Tools VERSUS Visual Effects Tools
+
+<img src="images/versus.png" width="800"/>
+
+---
+
+## Scientific Viz Tools VERSUS Visual Effects Tools
+
+<img src="images/ytiniVersus.png" width="800"/>
+
+[ytini](www.ytini.com)
+
+[Astroblend](www.astroblend.com)
+
+notes:
+several of us at the NCSA worked on ytini so that Houdini could use some of the features of yt natively!
+
+This is also true of Dr. Naiman's work on Astroblend.
 
 ---
 
