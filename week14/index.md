@@ -25,6 +25,6 @@ You made it! Congratulations!
  * [Group 1](https://priyab2.github.io/git-wiki/)
  * [Group 2](https://erikaweir.github.io/DataViz/)
  * [Group 3](https://evokic.github.io/DV_Project/ProjectFinal.html)
- * [Group 4]()
+ * [Group 4](https://csqunj.github.io/DVFinal/Group4-Part3.html)
  * [Group 5](https://gillian850413.github.io/build/index.html)
  * [Group 6](https://sarvaniputta.github.io/dayinlife/story.html)
